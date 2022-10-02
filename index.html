@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Back To Top Button</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      outline: 1px solid red;
+    }
+
+    html {
+      /* 平滑捲動 */
+      scroll-behavior: smooth;
+    }
+
+    h1 {
+      background-color: #03cc65;
+      color: #fff;
+      /* font-size: 單位用 vmin RWD自行判斷？; */
+      font-size: 15vmin;
+      text-align: center;
+      padding-top: 30px;
+    }
+
+    h3 {
+      background-color: #03cc65;
+      color: #001a2e;
+      font-size: 8vmin;
+      text-align: center;
+    }
+
+    p {
+      font-size: 3vmin;
+      line-height: 2em;
+      letter-spacing: 0.05em;
+      /* 文字內容左右貼邊滿版 */
+      text-align: justify;
+      margin: 50px 0;
+      padding: 0 30px;
+    }
+
+    /* ================================ */
+    /* GOTOP UI */
+    /* ================================ */
+    #progress {
+      background-color: #03cc65;
+      /* 固定定位於右下方 */
+      position: fixed;
+      bottom: 20px;
+      right: 10px;
+      /* 尺寸大小 */
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      /*  (grid用) place-content 把 align-content 跟 justify-content 合在一起 (垂直置中) */
+      /* display: grid; */
+      place-items: center;
+      cursor: pointer;
+      display: none;
+    }
+
+    #progress-value {
+      /* 內縮15px */
+      height: calc(100% - 15px);
+      width: calc(100% - 15px);
+      /* position: absolute;
+      inset: 15px; */
+
+      border-radius: 50%;
+      background-color: #ffffff;
+      color: #001a2e;
+      font-size: 35px;
+      display: grid;
+      place-items: center;
+
+    }
+  </style>
+</head>
+
+<body>
+  <!-- GOTOP UI -->
+  <div id="progress">
+    <!-- 使用 Unicode 的 HTML代號 &#94; -->
+    <span id="progress-value">&#94;</span>
+  </div>
+
+  <h1>Back To Top Button</h1>
+  <h3>With Scroll Progress</h3>
+
+  <div class="text-wrap">
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam unde
+      cupiditate nobis incidunt molestias rem aliquam nisi, nihil non eius
+      blanditiis eveniet veritatis, quam architecto cum quod maiores facere
+      atque, alias neque minus hic asperiores! Qui, harum iste, optio nam
+      dolorum molestias impedit ipsum quos non magnam quaerat error
+      necessitatibus, officiis nostrum minus maiores iusto accusantium sint
+      atque pariatur. Recusandae facere facilis ab cupiditate reiciendis. Ut
+      reiciendis iusto non eligendi saepe iure, itaque, odio facere laboriosam
+      qui voluptatibus id assumenda totam fugit, numquam temporibus ad sint
+      voluptatum tenetur unde illo. Pariatur nesciunt, perspiciatis rerum
+      voluptates voluptatum consequuntur placeat autem deserunt.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam sed
+      perspiciatis rerum ea quia nostrum, quod sit dolorem, illum officia
+      inventore, maiores ipsum voluptas aut facere? Quos, autem odit nostrum
+      ipsam recusandae nulla, labore assumenda voluptatibus quas quisquam
+      adipisci eveniet illo voluptatem nisi porro, deserunt nemo! Sit reiciendis
+      unde ab, consequatur excepturi expedita vel tempora mollitia quibusdam
+      velit earum exercitationem placeat praesentium quo quisquam ipsa voluptate
+      eum, tempore aperiam corporis. Exercitationem, amet. Amet cum nulla
+      accusantium modi molestias nesciunt sint soluta, fuga alias doloribus odit
+      dolor ipsa libero corporis neque adipisci aspernatur quisquam, sit,
+      officia id harum tenetur ullam beatae!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit est in
+      minima quos accusamus, id assumenda laborum libero culpa autem corrupti
+      repellendus voluptatem saepe odit maxime, aut ab fugit voluptas omnis
+      dolorem voluptate rem velit. Alias quod hic ullam necessitatibus! Tempore
+      nesciunt tenetur omnis perferendis id beatae non cum porro. Pariatur
+      facere nesciunt deleniti, laudantium praesentium facilis, minus quo magni
+      dolorem similique, mollitia quisquam ad voluptatibus iure ullam magnam!
+      Blanditiis, harum? Eveniet architecto eum velit, quia molestiae accusamus
+      voluptatem non quis accusantium aspernatur cumque id modi! Aliquam ab
+      expedita ipsum, libero in quod, sunt mollitia voluptatibus sapiente, dolor
+      sit delectus?
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit molestias
+      dolorum dolore amet tenetur! At sed nulla sapiente dolorum hic, facere
+      accusamus officiis placeat commodi molestias, velit dolor ab quibusdam
+      nostrum numquam optio asperiores impedit perspiciatis consequuntur iusto
+      laborum deserunt quisquam doloribus! Ducimus explicabo aspernatur sed
+      dolores perspiciatis, vero tenetur consequuntur culpa dicta numquam facere
+      labore, deleniti maiores. Fuga id saepe aliquid adipisci iste, beatae
+      pariatur ullam voluptas accusantium dolor voluptatibus numquam consectetur
+      asperiores eaque reprehenderit! Maiores, ex consequuntur! Consequuntur
+      nulla voluptate quaerat accusantium et optio reiciendis id repellendus
+      possimus, minus dolore? Perferendis labore doloribus iusto nostrum
+      nesciunt vero commodi cupiditate optio at. Perspiciatis atque inventore,
+      dolorum iste deserunt, accusantium magnam cum temporibus quae placeat
+      magni debitis blanditiis reprehenderit tempore a veniam laborum
+      consectetur amet? Animi cumque nisi aspernatur consequuntur, molestias
+      vero eaque fuga repellat mollitia assumenda necessitatibus! Suscipit atque
+      modi quam ab optio. Eum voluptatem, magni deleniti voluptas autem
+      molestias consectetur totam culpa facilis maiores illum dolore aut! Cumque
+      quas molestiae dolorem pariatur commodi omnis, ut, iste aliquid illo ipsum
+      eum culpa laborum doloribus quod. Ad dicta reprehenderit corrupti, soluta
+      sapiente unde officia blanditiis architecto reiciendis magni sequi.
+      Repellat ex ab laboriosam, quos error enim ut officiis inventore
+      accusamus!
+    </p>
+  </div>
+
+  <!-- script -->
+  <script>
+    // ========================
+    // 計算捲軸滾動的值
+    // ========================
+    let calcScrollValue = function () {
+      const scrollProgress = document.getElementById('progress')
+      const progressValue = document.getElementById('progress-value')
+      // 頁面頂點到底的距離位置（用倒數的方式，底部是0)
+      // 獲取當前頁面滾動條縱坐標的位置
+      let scrollLocation = document.documentElement.scrollTop
+      // console.log(scrollLocation)
+      let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight
+      // console.log(calcHeight)
+      //  Math.round() 四捨五入
+      let scrollValue = Math.round((scrollLocation * 100) / calcHeight)
+      console.log(scrollValue)
+
+      // ========================
+      // 判斷 GOTOTOP 出現的 位置
+      // ========================
+      if (scrollLocation > 100) {
+        scrollProgress.style.display = 'grid'
+      } else {
+        scrollProgress.style.display = 'none'
+      }
+      // ========================
+      // 點擊 GOTOTOP 回到最上面
+      // ========================
+      scrollProgress.addEventListener('click', function () {
+        document.documentElement.scrollTop = 0
+      })
+      // ========================
+      // 進度條 （利用錐狀漸層來處理 conic-gradient)
+      // ========================
+      scrollProgress.style.background = `conic-gradient(#03cc65 ${scrollValue}%, #d7d7d7 ${scrollValue}%)`
+
+    }
+
+
+    // ========================
+    // 滾動觸發事件(頁面事件)
+    // ========================
+    // onscrolll 就是捲軸滾動時會觸發事件去執行程式，可設置在所有有捲軸屬性的元素
+    window.onscroll = calcScrollValue
+    // onload 就是能夠設定能在頁面載入完成時會觸發事件去執行程式
+    // 瀏覽器頁面全部資源加載完畢scroll ： 瀏覽器滾動的時候觸發...
+    window.onload = calcScrollValue
+  </script>
+
+
+</body>
+
+</html>
